@@ -1,0 +1,34 @@
+@bg-color: #F5F5F5;
+@border-color: #e5e5e5;
+
+.absolute-middle(){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.clearfix(){
+	:after{
+		content:".";
+		display:block;
+		height:0;
+		visibility:hidden;
+		clear:both;
+	}
+}
+
+// 背景尺寸
+// -------------------------
+.backgroundSize(@size: contain) {
+  -webkit-background-size: @size;
+  background-size: @size;
+}
+// icon
+// -------------------------
+.icon(@width; @height; @backgroundSize: contain; @display: inline-block) {
+  display: @display;
+  width: @width;
+  height: @height;
+  .backgroundSize(@backgroundSize);
+}

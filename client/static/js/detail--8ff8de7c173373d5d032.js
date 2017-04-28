@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/ 	__webpack_require__.p = "//127.0.0.1:8080/";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -45,10 +45,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	var Style = __webpack_require__(1);
-	function Index() {
-		console.log("index");
-	}
-	Index();
+	var Detail = function () {};
 
 /***/ },
 /* 1 */
@@ -60,14 +57,14 @@
 	var content = __webpack_require__(2);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(8)(content, {});
+	var update = __webpack_require__(9)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./index.less", function() {
-				var newContent = require("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./index.less");
+			module.hot.accept("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./detail.less", function() {
+				var newContent = require("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./detail.less");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -85,7 +82,7 @@
 
 
 	// module
-	exports.push([module.id, "* {\n  padding: 0;\n  margin: 0;\n  font-family: 'SimHei';\n  color: black;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F5F5F5;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\n.hide {\n  display: none !important;\n}\n.index-banner {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n}\n.index-banner img {\n  width: 100%;\n  height: auto;\n}\n.headlines {\n  height: 0.4rem;\n  background-color: #ED4D44;\n  margin: 0.2rem 0;\n}\n.hot-sale .title {\n  margin-bottom: 0.25rem;\n}\n.hot-sale .title .line {\n  position: relative;\n  height: 4px;\n  background-color: #cfcfcf;\n}\n.hot-sale .title .line span {\n  display: inline-block;\n  padding: 10px 20px;\n  background: #F5F5F5;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.hot-sale .hot-list-wrap {\n  position: relative;\n  height: 2.1rem;\n}\n.hot-sale .hot-list-wrap .hot-list-item {\n  position: absolute;\n  margin: 20px;\n  border-radius: 10px 10px 0 0;\n  border: 1px solid #e5e5e5;\n}\n.hot-sale .hot-list-wrap .hot-list-item a {\n  display: block;\n}\n.hot-sale .hot-list-wrap .hot-list-item .img-box {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n  border-radius: 10px 10px 0 0;\n}\n.hot-sale .hot-list-wrap .hot-list-item .img-box img {\n  width: 100%;\n  height: auto;\n}\n.hot-sale .hot-list-wrap .hot-list-item .hot-info {\n  margin: 8px;\n}\n.hot-sale .hot-list-wrap .hot-list-item .hot-info .introduction-wrap {\n  position: relative;\n  overflow: hidden;\n  padding: 4px 0;\n}\n.hot-sale .hot-list-wrap .hot-list-item .hot-info .introduction {\n  width: 80%;\n  float: left;\n  overflow: hidden;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #999;\n}\n.hot-sale .hot-list-wrap .hot-list-item .hot-info .price {\n  width: 20;\n  float: right;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #ED4D44;\n}\n.goods-list-wrap .banner {\n  position: relative;\n  z-index: 0;\n  background-color: #08C4A2;\n  padding: 10px 10px 0.5rem 10px;\n}\n.goods-list-wrap .banner h1,\n.goods-list-wrap .banner p {\n  color: #F5F5F5;\n}\n.goods-list-wrap .banner p {\n  line-height: 0.2rem;\n}\n.goods-list-wrap .banner hr {\n  display: block;\n  width: 5.4em;\n  height: 0.04rem;\n  background-color: #F5F5F5;\n  border: none;\n  margin-top: 0.1rem;\n}\n.goods-list-wrap .goods-list {\n  overflow: hidden;\n  height: auto;\n  position: relative;\n  top: -0.5rem;\n}\n.goods-list-wrap .goods-list .list-item:nth-child(2n+1) {\n  margin-left: 4%;\n  top: 0.2rem;\n}\n.goods-list-wrap .goods-list .list-item {\n  position: relative;\n  z-index: 999;\n  width: 44%;\n  float: left;\n  margin: 0 2% 2% 2%;\n  border-radius: 10px 10px 0 0;\n  border: 1px solid #e5e5e5;\n}\n.goods-list-wrap .goods-list .list-item a {\n  display: block;\n}\n.goods-list-wrap .goods-list .list-item .img-box {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n  border-radius: 10px 10px 0 0;\n}\n.goods-list-wrap .goods-list .list-item .img-box img {\n  width: 100%;\n  height: auto;\n}\n.goods-list-wrap .goods-list .list-item .info {\n  margin: 8px;\n}\n.goods-list-wrap .goods-list .list-item .info .introduction-wrap {\n  position: relative;\n  overflow: hidden;\n  padding: 4px 0;\n}\n.goods-list-wrap .goods-list .list-item .info .introduction {\n  width: 80%;\n  float: left;\n  overflow: hidden;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #999;\n}\n.goods-list-wrap .goods-list .list-item .info .price {\n  width: 20;\n  float: right;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #ED4D44;\n}\n", ""]);
+	exports.push([module.id, "* {\n  padding: 0;\n  margin: 0;\n  font-family: 'SimHei';\n  color: black;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F5F5F5;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\n.hide {\n  display: none !important;\n}\n.detail-head {\n  height: 0.4rem;\n  top: 0;\n}\n.detail-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.detail-head .icon-return {\n  display: inline-block;\n  width: 0.2rem;\n  height: 0.2rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(8) + ");\n}\n", ""]);
 
 	// exports
 
@@ -2193,6 +2190,12 @@
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
+	module.exports = __webpack_require__.p + "static/img/icon_return.png";
+
+/***/ },
+/* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/*
 		MIT License http://www.opensource.org/licenses/mit-license.php
 		Author Tobias Koppers @sokra
@@ -2227,7 +2230,7 @@
 		singletonElement = null,
 		singletonCounter = 0,
 		styleElementsInsertedAtTop = [],
-		fixUrls = __webpack_require__(9);
+		fixUrls = __webpack_require__(10);
 
 	module.exports = function(list, options) {
 		if(false) {
@@ -2486,7 +2489,7 @@
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	
