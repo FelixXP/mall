@@ -1,0 +1,172 @@
+@import url(./global.less);
+
+// 广告
+.index-banner{
+	width: 100%;
+	height: 1rem;
+	overflow: hidden;
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
+.headlines{
+	height: 0.4rem;
+	background-color: #ED4D44;
+	margin: 0.2rem 0;
+}
+
+
+
+.hot-sale{
+	.title{
+		margin-bottom:0.25rem;
+		.line{
+			position: relative;
+			height: 4px;
+			background-color: #cfcfcf;
+			span{
+				display: inline-block;
+				padding: 10px 20px;
+				background: @bg-color;
+				.absolute-middle();
+			}
+		}
+
+	}
+
+
+	.hot-list-wrap{
+		position: relative;
+		height: 2.1rem;
+		.hot-list-item{
+			position: absolute;
+			margin: 20px;
+			border-radius: 10px 10px 0 0;
+			border: 1px solid @border-color;
+			a{
+				display: block;
+			}
+			.img-box{
+				width: 100%;
+				height: 1rem;
+				overflow: hidden;
+				border-radius: 10px 10px 0 0;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			.hot-info{
+				margin: 8px;
+				.introduction-wrap{
+					position: relative;
+					overflow:hidden;
+					padding: 4px 0;
+				}
+				.introduction{
+					width: 80%;
+					float: left;
+					overflow: hidden;
+					font-size: 12px;
+					font-family: 'STFangsong';
+					color: #999;
+				}
+				.price{
+					width: 20;
+					float: right;
+					font-size: 12px;
+					font-family: 'STFangsong';
+					color: #ED4D44;
+				}
+			}
+
+
+		}
+	}
+}
+
+.goods-list-wrap{
+	.banner{
+		position: relative;
+		z-index: 0;
+		background-color: #08C4A2;
+		padding: 10px 10px 0.5rem 10px;
+		h1,p{
+			color: @bg-color;
+		}
+		p{
+			line-height: 0.2rem;
+		}
+		hr{
+			display: block;
+			width: 5.4em;
+			height: 0.04rem;
+			background-color: @bg-color;
+			border: none;
+			margin-top: 0.1rem;
+
+		}
+	}
+
+	.goods-list{
+		// .clearfix();
+		overflow: hidden;
+		height: auto;
+		position: relative;
+		top: -0.5rem;
+		.list-item:nth-child(2n+1){
+			margin-left: 4%;
+			top: 0.2rem;
+		}
+		.list-item{
+			position: relative;
+			z-index: 999;
+			width: 44%;
+			float: left;
+			margin: 0 2% 2% 2%;
+			border-radius: 10px 10px 0 0;
+			border: 1px solid @border-color;
+			a{
+				display: block;
+			}
+			.img-box{
+				width: 100%;
+				height: 1rem;
+				overflow: hidden;
+				border-radius: 10px 10px 0 0;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			.info{
+				margin: 8px;
+				.introduction-wrap{
+					position: relative;
+					overflow:hidden;
+					padding: 4px 0;
+				}
+				.introduction{
+					width: 80%;
+					float: left;
+					overflow: hidden;
+					font-size: 12px;
+					font-family: 'STFangsong';
+					color: #999;
+				}
+				.price{
+					width: 20;
+					float: right;
+					font-size: 12px;
+					font-family: 'STFangsong';
+					color: #ED4D44;
+				}
+			}
+
+
+		}
+	}
+	
+}
