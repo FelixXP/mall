@@ -10,7 +10,7 @@ module.exports = {
     },
     // 入口文件输出配置
     output : {
-        filename : 'static/js/[name]--[hash].js',
+        filename : 'static/js/[name].bundle.js',
         publicPath: '//127.0.0.1:8080/'
     },
     module: {

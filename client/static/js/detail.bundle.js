@@ -44,15 +44,50 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	var Style = __webpack_require__(11);
-	function Deatil() {
-		console.log("detail");
-	}
-	Deatil();
+	var Style = __webpack_require__(1);
+	var Detail = function () {};
 
 /***/ },
-/* 1 */,
-/* 2 */,
+/* 1 */
+/***/ function(module, exports, __webpack_require__) {
+
+	// style-loader: Adds some css to the DOM by adding a <style> tag
+
+	// load the styles
+	var content = __webpack_require__(2);
+	if(typeof content === 'string') content = [[module.id, content, '']];
+	// add the styles to the DOM
+	var update = __webpack_require__(13)(content, {});
+	if(content.locals) module.exports = content.locals;
+	// Hot Module Replacement
+	if(false) {
+		// When the styles change, update the <style> tags
+		if(!content.locals) {
+			module.hot.accept("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./detail.less", function() {
+				var newContent = require("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./detail.less");
+				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+				update(newContent);
+			});
+		}
+		// When the module is disposed, remove the <style> tags
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(3)(undefined);
+	// imports
+
+
+	// module
+	exports.push([module.id, ".hide {\n  display: none !important;\n}\n.tab {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n}\n.tab.tab-orange {\n  background-color: #F78E0F;\n}\n.tab.tab-blue {\n  background-color: #4A8BF6;\n}\n.fl-right {\n  float: right;\n}\n.fl-right:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n* {\n  padding: 0;\n  margin: 0;\n  color: #333;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F5F5F5;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\ninput {\n  border: none;\n}\n.detail-head {\n  height: 0.4rem;\n  position: relative;\n}\n.detail-head h1 {\n  text-align: center;\n  font-size: 0.18rem;\n  font-weight: normal;\n  line-height: 0.4rem;\n}\n.detail-head .icon-return {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(8) + ");\n  position: absolute;\n  left: 0.1rem;\n  top: 0.125rem;\n}\n.detail-head .icon-share {\n  display: inline-block;\n  width: 0.15rem;\n  height: 0.15rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  background-image: url(" + __webpack_require__(9) + ");\n  position: absolute;\n  right: 0.1rem;\n  top: 0.125rem;\n}\n.detail-main .goods-wrap {\n  border-bottom: 10px solid #d0dee6;\n  padding-bottom: 0.3rem;\n}\n.detail-main .goods-wrap .goods-img-box {\n  position: relative;\n  width: 100%;\n  height: 1.6rem;\n}\n.detail-main .goods-wrap .goods-img-box .list-item {\n  width: 100%;\n  height: 100%;\n  overflow: hidden;\n}\n.detail-main .goods-wrap .goods-img-box img {\n  width: 100%;\n  height: auto;\n}\n.detail-main .goods-wrap .goods-img-box .slider-icon {\n  position: absolute;\n  bottom: 4px;\n  width: 100%;\n  text-align: center;\n}\n.detail-main .goods-wrap .goods-img-box .slider-icon span {\n  display: inline-block;\n  width: 5px;\n  height: 5px;\n  border-radius: 50%;\n  background-color: #F5F5F5;\n}\n.detail-main .goods-wrap .goods-img-box .slider-icon span.active {\n  background-color: #01A1EA;\n}\n.detail-main .goods-wrap .price-bar {\n  line-height: 3em;\n  padding: 0 0.1rem;\n}\n.detail-main .goods-wrap .price-bar .price {\n  color: #F11F1E;\n}\n.detail-main .goods-wrap .price-bar .want-btn {\n  text-align: right;\n  float: right;\n  line-height: 3em;\n}\n.detail-main .goods-wrap .price-bar .want-btn:after {\n  content: \" \";\n  display: block;\n  clear: both;\n  height: 0;\n  font-size: 0;\n  visibility: hidden;\n}\n.detail-main .goods-wrap .price-bar .want-btn span {\n  border-radius: 5px;\n  background-color: #F11F1E;\n  color: #F5F5F5;\n  padding: 5px 6px;\n}\n.detail-main .goods-info-wrap {\n  padding: 0 0.1rem;\n}\n.detail-main .goods-info-wrap .head-portrait {\n  display: inline-block;\n  width: 0.4rem;\n  height: 0.4rem;\n  border-radius: 50%;\n  overflow: hidden;\n}\n.detail-main .goods-info-wrap .head-portrait img {\n  width: 100%;\n  height: 100%;\n}\n.detail-main .goods-info-wrap .info-right {\n  vertical-align: top;\n  display: inline-block;\n}\n.detail-main .goods-info-wrap .name {\n  font-weight: bold;\n}\n.detail-main .goods-info-wrap .goods-introduction-wrap {\n  margin: 0.1rem 0;\n}\n.detail-main .goods-info-wrap .introduction {\n  line-height: 1.4em;\n}\n.detail-main .goods-info-wrap .goods-tabs {\n  margin: 0.1rem 0;\n}\n.detail-main .share-bar {\n  margin-top: 0.5rem;\n  text-align: center;\n  color: #333;\n}\n.detail-main .share-bar .like,\n.detail-main .share-bar .share {\n  display: inline-block;\n  margin: 0 0.2rem;\n}\n.detail-main .share-bar .like-icon,\n.detail-main .share-bar .share-icon {\n  display: inline-block;\n  width: 0.3rem;\n  height: 0.3rem;\n  -webkit-background-size: contain;\n  background-size: contain;\n  border-radius: 50%;\n  overflow: hidden;\n}\n.detail-main .share-bar .like-icon {\n  background-image: url(" + __webpack_require__(10) + ");\n  background-color: #E14B64;\n}\n.detail-main .share-bar .share-icon {\n  background-image: url(" + __webpack_require__(11) + ");\n  background-color: #32F723;\n}\n.detail-main .comment-wrap {\n  min-height: 2rem;\n  padding: 0 0.1rem;\n}\n.detail-main .comment-wrap .comment-head {\n  border-bottom: 1px solid #d0dee6;\n  line-height: 3em;\n}\n.detail-main .comment-wrap .icon-comment {\n  display: inline-block;\n  width: 0.25rem;\n  height: 0.25rem;\n  border-radius: 50%;\n  background-size: 0.15rem 0.15rem;\n  background-image: url(" + __webpack_require__(12) + ");\n  background-color: #8EC1E8;\n  background-repeat: no-repeat;\n  background-position: 50% 50%;\n  line-height: 1em;\n  vertical-align: middle;\n}\n.detail-main .comment-wrap .comment-list-item {\n  padding: 0.15rem;\n  padding-bottom: 0.1rem;\n  border-bottom: 1px solid #d0dee6;\n}\n.detail-main .comment-wrap .comment-user {\n  font-size: 0.12rem;\n}\n.detail-main .comment-wrap .comment-user div {\n  display: inline-block;\n}\n.detail-main .comment-wrap .comment-user .user-portrait {\n  display: inline-block;\n  width: 0.3rem;\n  height: 0.3rem;\n  border-radius: 50%;\n  overflow: hidden;\n}\n.detail-main .comment-wrap .comment-user .right-box {\n  vertical-align: top;\n}\n.detail-main .comment-wrap .comment-connent {\n  padding-left: 0.3rem;\n}\n.detail-main .comment-wrap .comment-reply {\n  background-color: #DCF2F7;\n  line-height: 1.5em;\n  margin: 0.1rem 0;\n}\n.comment-input-bar {\n  width: 100%;\n  position: fixed;\n  bottom: 0;\n  background-color: #F3F6F8;\n}\n.comment-input-bar .comment-input {\n  margin: 0.2rem 0 0.1rem 0.1rem;\n  line-height: 2em;\n  display: inline-block;\n  width: 80%;\n  background-color: #D2DBE2;\n  border-radius: 5px;\n  text-indent: 1em;\n}\n.comment-input-bar .sumbit-btn {\n  display: inline-block;\n  margin-top: 0.2rem;\n  margin-right: 0.1rem;\n  line-height: 2em;\n}\n", ""]);
+
+	// exports
+
+
+/***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -2152,8 +2187,37 @@
 
 
 /***/ },
-/* 8 */,
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "static/img/icon_return.png";
+
+/***/ },
 /* 9 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "static/img/icon_share1.png";
+
+/***/ },
+/* 10 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "static/img/icon_like.png";
+
+/***/ },
+/* 11 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "static/img/icon_share2.png";
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "static/img/icon_comment.png";
+
+/***/ },
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -2190,7 +2254,7 @@
 		singletonElement = null,
 		singletonCounter = 0,
 		styleElementsInsertedAtTop = [],
-		fixUrls = __webpack_require__(10);
+		fixUrls = __webpack_require__(14);
 
 	module.exports = function(list, options) {
 		if(false) {
@@ -2449,7 +2513,7 @@
 
 
 /***/ },
-/* 10 */
+/* 14 */
 /***/ function(module, exports) {
 
 	
@@ -2541,46 +2605,6 @@
 		// send back the fixed css
 		return fixedCss;
 	};
-
-
-/***/ },
-/* 11 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-
-	// load the styles
-	var content = __webpack_require__(12);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(9)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./index.less", function() {
-				var newContent = require("!!../../../node_modules/.0.28.0@css-loader/index.js!../../../node_modules/.4.0.3@less-loader/dist/index.js!./index.less");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(3)(undefined);
-	// imports
-
-
-	// module
-	exports.push([module.id, "* {\n  padding: 0;\n  margin: 0;\n  font-family: 'SimHei';\n  color: black;\n}\nhtml {\n  font-size: 100px;\n}\nbody {\n  font-size: 14px;\n  background-color: #F5F5F5;\n}\nli {\n  list-style: none;\n}\na {\n  text-decoration: none;\n}\n.hide {\n  display: none !important;\n}\n.index-banner {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n}\n.index-banner img {\n  width: 100%;\n  height: auto;\n}\n.headlines {\n  height: 0.4rem;\n  background-color: #ED4D44;\n  margin: 0.2rem 0;\n}\n.hot-sale .title {\n  margin-bottom: 0.25rem;\n}\n.hot-sale .title .line {\n  position: relative;\n  height: 4px;\n  background-color: #cfcfcf;\n}\n.hot-sale .title .line span {\n  display: inline-block;\n  padding: 10px 20px;\n  background: #F5F5F5;\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n}\n.hot-sale .hot-list-wrap {\n  position: relative;\n  height: 2.1rem;\n}\n.hot-sale .hot-list-wrap .hot-list-item {\n  position: absolute;\n  margin: 20px;\n  border-radius: 10px 10px 0 0;\n  border: 1px solid #e5e5e5;\n}\n.hot-sale .hot-list-wrap .hot-list-item a {\n  display: block;\n}\n.hot-sale .hot-list-wrap .hot-list-item .img-box {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n  border-radius: 10px 10px 0 0;\n}\n.hot-sale .hot-list-wrap .hot-list-item .img-box img {\n  width: 100%;\n  height: auto;\n}\n.hot-sale .hot-list-wrap .hot-list-item .hot-info {\n  margin: 8px;\n}\n.hot-sale .hot-list-wrap .hot-list-item .hot-info .introduction-wrap {\n  position: relative;\n  overflow: hidden;\n  padding: 4px 0;\n}\n.hot-sale .hot-list-wrap .hot-list-item .hot-info .introduction {\n  width: 80%;\n  float: left;\n  overflow: hidden;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #999;\n}\n.hot-sale .hot-list-wrap .hot-list-item .hot-info .price {\n  width: 20;\n  float: right;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #ED4D44;\n}\n.goods-list-wrap .banner {\n  position: relative;\n  z-index: 0;\n  background-color: #08C4A2;\n  padding: 10px 10px 0.5rem 10px;\n}\n.goods-list-wrap .banner h1,\n.goods-list-wrap .banner p {\n  color: #F5F5F5;\n}\n.goods-list-wrap .banner p {\n  line-height: 0.2rem;\n}\n.goods-list-wrap .banner hr {\n  display: block;\n  width: 5.4em;\n  height: 0.04rem;\n  background-color: #F5F5F5;\n  border: none;\n  margin-top: 0.1rem;\n}\n.goods-list-wrap .goods-list {\n  overflow: hidden;\n  height: auto;\n  position: relative;\n  top: -0.5rem;\n}\n.goods-list-wrap .goods-list .list-item:nth-child(2n+1) {\n  margin-left: 4%;\n  top: 0.2rem;\n}\n.goods-list-wrap .goods-list .list-item {\n  position: relative;\n  z-index: 999;\n  width: 44%;\n  float: left;\n  margin: 0 2% 2% 2%;\n  border-radius: 10px 10px 0 0;\n  border: 1px solid #e5e5e5;\n}\n.goods-list-wrap .goods-list .list-item a {\n  display: block;\n}\n.goods-list-wrap .goods-list .list-item .img-box {\n  width: 100%;\n  height: 1rem;\n  overflow: hidden;\n  border-radius: 10px 10px 0 0;\n}\n.goods-list-wrap .goods-list .list-item .img-box img {\n  width: 100%;\n  height: auto;\n}\n.goods-list-wrap .goods-list .list-item .info {\n  margin: 8px;\n}\n.goods-list-wrap .goods-list .list-item .info .introduction-wrap {\n  position: relative;\n  overflow: hidden;\n  padding: 4px 0;\n}\n.goods-list-wrap .goods-list .list-item .info .introduction {\n  width: 80%;\n  float: left;\n  overflow: hidden;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #999;\n}\n.goods-list-wrap .goods-list .list-item .info .price {\n  width: 20;\n  float: right;\n  font-size: 12px;\n  font-family: 'STFangsong';\n  color: #ED4D44;\n}\n", ""]);
-
-	// exports
 
 
 /***/ }

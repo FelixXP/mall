@@ -2,7 +2,7 @@
 
 .detail-head{
 	height: 0.4rem;
-	top: 0; 
+	position: relative;
 	h1{
 		text-align: center;
 		font-size: 0.18rem;
@@ -10,10 +10,207 @@
 		line-height: 0.4rem;
 	}
 	.icon-return{
-		.icon(0.2rem, 0.2rem);
+		.icon(0.15rem, 0.15rem);
 		background-image: url(../img/icon_return.png);
+		position: absolute;
+		left: 0.1rem;
+		top: 0.125rem;
+	}
+	.icon-share{
+		.icon(0.15rem, 0.15rem);
+		background-image: url(../img/icon_share1.png);
+		position: absolute;
+		right: 0.1rem;
+		top: 0.125rem;
 	}
 }
 
 .detail-main{
+	.goods-wrap{
+		border-bottom: 10px solid #d0dee6;
+		padding-bottom: 0.3rem;
+		.goods-img-box{
+			position: relative;
+			width: 100%;
+			height: 1.6rem;
+			.list-item{
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+			.slider-icon{
+				position: absolute;
+				bottom: 4px;
+				width: 100%;
+				text-align: center;
+				span{
+					display: inline-block;
+					width: 5px;
+					height: 5px;
+					border-radius: 50%;
+					background-color: @bg-color;
+				}
+				span.active{
+					background-color: @blue-color;
+				}
+			}
+		}
+
+		.price-bar{
+			line-height: 3em;
+			padding: 0 0.1rem;
+			.price{
+				color: @price-color;
+			}
+			.want-btn{
+				text-align: right;
+				float: right;
+				.clearfix();
+				line-height: 3em;
+				span{
+					border-radius: 5px;
+					background-color: @price-color;
+					color: @bg-color;
+					padding: 5px 6px;
+				}
+			}
+		}
+	}
+
+	.goods-info-wrap{
+		padding: 0 0.1rem;
+
+		// 商家信息
+		.head-portrait{
+			display: inline-block;
+			width: 0.4rem;
+			height: 0.4rem;
+			border-radius: 50%;
+			overflow: hidden;
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.info-right{
+			vertical-align: top;
+			display: inline-block;
+		}
+		.name{
+			font-weight: bold;
+		}
+
+		// 商品描述
+		.goods-introduction-wrap{
+			margin: 0.1rem 0;
+		}
+		.introduction{
+			line-height: 1.4em;
+		}
+		.goods-tabs{
+			margin: 0.1rem 0;
+		}
+	}
+
+	.share-bar{
+		margin-top: 0.5rem;
+		text-align: center;
+		color: #333;
+		.like,.share{
+			display: inline-block;
+			margin: 0 0.2rem;
+		}
+		.like-icon,.share-icon{
+			.icon(0.3rem,0.3rem);
+			border-radius: 50%;
+			overflow: hidden;
+		}
+		.like-icon{
+			background-image: url(../img/icon_like.png);
+			background-color: #E14B64;
+		}
+		.share-icon{
+			background-image: url(../img/icon_share2.png);
+			background-color: #32F723;
+		}
+	}
+
+	.comment-wrap{
+		min-height: 2rem;
+		padding: 0 0.1rem;
+		.comment-head{
+			border-bottom: 1px solid #d0dee6;
+			line-height: 3em;
+		}
+		.icon-comment{
+			display: inline-block;
+			width: 0.25rem;
+			height: 0.25rem;
+			border-radius: 50%;
+			background-size: 0.15rem 0.15rem;
+			background-image: url(../img/icon_comment.png);
+			background-color: #8EC1E8;
+			background-repeat:no-repeat;
+			background-position: 50% 50%;
+			line-height: 1em;
+			vertical-align: middle;
+		}
+
+		.comment-list-item{
+			padding: 0.15rem; 
+			padding-bottom: 0.1rem;
+			border-bottom: 1px solid #d0dee6;
+		}
+		.comment-user{
+			font-size: 0.12rem;
+			div{display: inline-block;}
+			.user-portrait{
+				display: inline-block;
+				width: 0.3rem;
+				height: 0.3rem;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+			.right-box{
+				vertical-align: top;
+			}
+		}
+
+		.comment-connent{
+			padding-left: 0.3rem;
+		}
+		.comment-reply{
+			background-color: #DCF2F7;
+			line-height: 1.5em;
+			margin: 0.1rem 0;
+		}
+
+	}
+}
+
+.comment-input-bar{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: #F3F6F8;
+
+	.comment-input{
+		margin: 0.2rem 0 0.1rem 0.1rem;
+		line-height: 2em;
+		display: inline-block;
+		width: 80%;
+		background-color: #D2DBE2;
+		border-radius: 5px;
+		text-indent: 1em;
+	}
+	.sumbit-btn{
+		display: inline-block;
+		margin-top: 0.2rem;
+		margin-right: 0.1rem;
+		line-height: 2em;
+	}
 }

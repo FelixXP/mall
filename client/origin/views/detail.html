@@ -57,57 +57,123 @@
 </head>
 <body>
 	<header class="detail-head">
-        <a href="javasctipt:;">
-    		<span class="icon icon-return"></span>
-        </a>
-		<h1>商品详情</h1>
-		<span class="icon icon-share"></span>
+        <a href="javascript:;" class="icon icon-return"></a>
+        <a href="javascript:;" class="icon icon-share"></a>
+        <h1>商品详情</h1>
+		
 	</header>
 	<div class="detail-main">
 		<div class="goods-wrap">
-			<div class="img-box">
-				<img src="" alt="">
-				<div>
-					<span></span>
+			<ul class="goods-img-box img-list">
+                <li class="list-item">
+                    <img src="/static/img/02.jpg" alt="">
+                </li>            
+           
+				<div class="slider-icon">
+					<span class="active"></span>
 					<span></span>
 					<span></span>
 				</div>
-			</div>
-			<div class="price-bar">
-				<span class="price"></span>
-				<a href="javescript:;">
-					<span>我想要</span>
+            </ul>
+			<p class="price-bar">
+				<span class="price">￥100.00</span>
+				<a href="javascript:;" class="want-btn">
+					<span class="tab">我想要</span>
 				</a>
-			</div>
+			</p>
 			<div class="goods-info-wrap">
 				<div class="user-info">
-					<div class="img-box"></div>
-					<p class="name">米多多</p>
-					<p class="time">2017-04-25 15:48</p>
+					<div class="head-portrait">
+                        <img src="/static/img/02.jpg" alt="">               
+                    </div>
+                    <div class="info-right">
+                        <p class="name">米多多</p>
+                        <p class="time">2017-04-25 15:48</p>
+                    </div>
+					
 				</div>
 				<div class="goods-introduction-wrap">
 					<p class="introduction">商品描述，全新，可小刀，免邮面交 商品描述，全新，可小刀，免邮面交 商品描述，全新，可小刀，免邮面交 </p>
 					<div class="goods-tabs">
-						<span class="tab tab-left">包邮</span>
-						<span class="tab tab-left phone">188*****046</span>
+						<span class="tab tab-left tab-orange">包邮</span>
+						<span class="tab tab-right tab-blue phone">188*****046</span>
 					</div>
 				</div>
 			</div>
 
-			<div class="share-wrap">
+			<div class="share-bar">
 				<div class="like">
-					<span class="icon like-icon"></span>
-					<span>
-						<span id="like-num">1</span>
-						人喜欢
-					</span>
-				</div>
-				<div class="share">
-					<span class="icon share-icon"></span>
-					<span>分享</span>
+                    <a href="javascript:;" class="icon like-icon"><span></span></a>
+                    <p><span id="like-num">1</span>人喜欢</p>
+                </div>
+                <div class="share">
+                    <a href="javascript:;" class="icon share-icon"><span></span></a>
+					<p>分享</p>
 				</div>
 			</div>
 		</div>
+
+        <div class="comment-wrap">
+            <div class="comment-head">
+                <p>
+                    <span class="icon icon-comment"></span>
+                    评论
+                    <span class="comment-count">10</span>
+                    条
+                </p>
+            </div>
+
+            <div class="comment-list-wrap">
+                <ul class="comment-list">
+                    <li class="comment-list-item">
+                        <div class="comment-user">
+                            <div class="user-portrait"><img src="/static/img/02.jpg"></div>
+                            <div class="right-box">
+                                <p class="name">米多多</p>
+                                <p class="time">2017-04-25 15:48</p>
+                            </div>
+                        </div>
+                        <div class="comment-connent">
+                            <p>东西还在吗？ 东西还在吗？ 东西还在吗？ 东西还在吗？ 东西还在吗？</p> 
+                        </div>
+                    </li>
+
+                    <li class="comment-list-item">
+                        <div class="comment-user">
+                            <div class="user-portrait"><img src="/static/img/02.jpg"></div>
+                            <div class="right-box">
+                                <p class="name">米多多</p>
+                                <p class="time">2017-04-25 15:48</p>
+                            </div>
+                        </div>
+                        <div class="comment-connent">
+                            <p>东西还在吗？ 东西还在吗？ 东西还在吗？ 东西还在吗？ 东西还在吗？</p> 
+                        </div>
+                    </li>
+
+                    <li class="comment-list-item">
+                        <div class="comment-user">
+                            <div class="user-portrait"><img src="/static/img/02.jpg"></div>
+                            <div class="right-box">
+                                <p class="name">米多多</p>
+                                <p class="time">2017-04-25 15:48</p>
+                            </div>
+                        </div>
+                        <div class="comment-connent">
+                            <p>东西还在吗？ 东西还在吗？ 东西还在吗？ 东西还在吗？ 东西还在吗？</p>
+                            <p class="comment-reply">
+                                回复@Felix的评论：什么鬼？
+                            </p> 
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 	</div>
+
+    <div class="comment-input-bar">
+        <input class="comment-input" type="text" name="comment" id="comment" placeholder="点击输入你的评论" />
+        <a href="javascript:;" class="sumbit-btn fl-right">发送</a>
+    </div>
 </body>
 </html>
