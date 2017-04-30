@@ -62,20 +62,40 @@
     </header>
     <div class="add-pag-box">
         <a href="javascript:;" class="add-page">
-            <p><img src="/static/img/icon_add_img.png" ></p>
-            <p><span>添加照片</span></p>
+            <label for="picture">
+                <p><img src="/static/img/icon_add_img.png" ></p>
+                <p><span>添加照片</span></p>
+            </label>
         </a>
     </div>
 
     <form action="" class="upload-form" id="upload_form">
-        <div>
+        <div  class="form-group">
             <textarea name="introduction" id="introduction" placeholder="详细描述几成新，购买事件都有助于吸引跟多人关注哦！" rows="5"></textarea>
         </div>
 
-        <div>
-            <span>想卖</span>
-            <input class="price" placeholder="" type="text" name="price" id="price">
+        <div class="form-group">
+            <label for="price">想卖</label>
+            <input class="price" placeholder="￥0.00" type="text" name="price" id="price">
         </div>
+
+        <div class="form-group">
+            <label>包邮</label>
+            <label class="postage check-box" for="postage"></label>
+            <input type="checkbox" name="postage" id="postage">
+        </div>
+
+        <p class="contact">联系方式</p>
+        <div class="form-group">
+            
+            <label for="phone">手机</label>
+            <input name="phone" class="phone" id="phone" placeholder="(必填)" type="text" onkeyup="value=this.value.replace(/\D+/g,'')">
+        </div>
+
+        <div class="form-group submit-group">
+            <input type="submit" value="完成" class="submit-btn">
+        </div>
+        <input type="file" name="picture" id="picture" hidden="hidden">
     </form>
 <script type="text/javascript" src="//127.0.0.1:8080/static/js/upload.bundle.js"></script></body>
 </html>

@@ -1,5 +1,5 @@
 @import url(./global.less);
-
+@import url(./form.less);
 .page-head{
 	margin-bottom: 1px;
 }
@@ -30,5 +30,39 @@
 		padding: 0.05rem;
 		line-height: 2em;
 		box-sizing:border-box;
+	}
+	.form-group{
+		margin-bottom: 0.1rem;
+		padding: 0 0.2rem;
+		input,label,p{
+			line-height: 2em;
+			vertical-align: middle;
+		}
+		label{
+			margin-right: 0.2rem;
+		}
+
+		.submit-btn{
+			margin: 0.1rem;
+			padding: 2px 10px;
+			letter-spacing: 5px;
+			border-radius: 5px;
+			background-color: @blue-color;
+			color: @bg-color;
+			text-align: center;
+
+		}
+	}
+
+	.submit-group{
+		text-align: center;
+	}
+	.contact{
+		font-size: 0.12rem;
+		color: #333;
+		background-color: @body-color;
+		width: 100%;
+		margin-left: 0.2rem;
+		margin-bottom: 0.04rem;
 	}
 }

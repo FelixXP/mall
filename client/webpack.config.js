@@ -5,8 +5,8 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     // 页面入口文件配置
     entry : {
-        // 'index': './origin/static/js/index.js',
-        // 'detail': './origin/static/js/detail.js',
+        'index': './origin/static/js/index.js',
+        'detail': './origin/static/js/detail.js',
         'upload': './origin/static/js/upload.js'
     },
     // 入口文件输出配置

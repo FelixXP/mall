@@ -1,0 +1,49 @@
+// 表单公共样式
+
+// 选择框 未选中
+.check-box{
+	display: inline-block;
+	width: 2.5em;
+	height: 1em;
+	box-sizing: border-box;
+	border: 1px solid @border-color;
+	background-color: #CBCBCB;
+	position: relative;
+	&:before{
+		content: " ";
+		display: block;
+		position: absolute;
+		width: 1.1em;
+		height: 1.1em;
+		background-color: @bg-color;
+		left: 0;
+	}
+	&:after{
+		content: "×";
+		position: absolute;
+		font-weight: bold;
+		line-height: 1em;
+		right: 1px;
+		color: @bg-color;
+		font-size: 0.12rem;
+
+	}
+}
+
+// 选择框 已选中
+.check-box.checked{
+	display: inline-block;
+	width: 2.5em;
+	height: 1em;
+	box-sizing: border-box;
+	border: 1px solid @border-color;
+	background-color: @blue-color;
+	position: relative;
+	&:before{
+		left: auto;
+		right: 0;
+	}
+	&:after{
+		display: none;
+	}
+}
